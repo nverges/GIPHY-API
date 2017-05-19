@@ -42,8 +42,8 @@
       // displayMovieInfo function re-renders the HTML to display the appropriate content
       function displayMovieInfo() {
 
-       	var person = $(this).attr("data-person");
-        var movie = $(this).attr("data-name");
+       	var person = $(this).attr("data-name");
+        // var movie = $(this).attr("data-name");
       	var queryURL = "http://api.giphy.com/v1/gifs/search?q=" +
         person + "&api_key=dc6zaTOxFJmzC&limit=10";
 
@@ -61,8 +61,6 @@
 
           // Retrieves the Rating Data
           var rating = response.Rated;
-          // console.log(response.Rated);
-          // console.log(movieDiv);
 
           // Creates an element to have the rating displayed
           var pOne = $("<p>").text("Rating: " + rating);
@@ -72,42 +70,25 @@
           // console.log(pOne);
 
 
-
-          // // Retrieves the release year 
-          // var released = response.Released;
-
-          // // Creates an element to hold the release year
-          // var pTwo = $("<p>").text("Release Year: " + released);
-
-          // // Displays the release year
-          // movieDiv.append(pTwo);
-
-
-   
-          // // Retrieves the plot
-          // var plot = response.Plot;
-          
-          // // Creates an element to hold the plot
-          // var pThree = $("<p>").text("Plot: " + plot);
-          
-          // // Appends the plot
-          // movieDiv.append(pThree);
-
-
-
           // Retrieving the URL for the image
           var imgURL = response.Poster;
 
-          // Creates an element to hold the image
-          var image = $("<img>").attr("src", response.data[5].images.fixed_height.url);
+          // generate gif for each returned result
+          for (i=0; i<response.data.length; i++) {	
 
-          // Appends the image
-          movieDiv.append(image);
+	          // Creates an element to hold the image
+	          var image = $("<img>").attr("src", response.data[i].images.fixed_height.url);
 
-          // Puts the entire Movie above the previous movies.
+	          // Appends the image
+	          movieDiv.append(image);
+      	  };
+
+          // clears gif window and prepends the entire movieDiv
+          $("#movies-view").empty();
           $("#movies-view").prepend(movieDiv);
 
         });
+
 
       }
 
@@ -117,6 +98,7 @@
         // Deletes the movies prior to adding new movies
         // (this is necessary otherwise you will have repeat buttons)
         $("#buttons-view").empty();
+
         // Loops through the array of movies
         for (var i = 0; i < movies.length; i++) {
 
@@ -151,32 +133,32 @@
       $(document).on("click", ".movie", displayMovieInfo);
 
 
-    $(".movie").on("click", function() {
-      // STEP ONE: study the html above.
-      // Look at all the data attributes.
-      // Run the file in the browser. Look at the images.
+    // $(".movie").on("click", function() {
+    //   // STEP ONE: study the html above.
+    //   // Look at all the data attributes.
+    //   // Run the file in the browser. Look at the images.
 
-      // After we complete steps 1 and 2 we'll be able to pause gifs from giphy.
+    //   // After we complete steps 1 and 2 we'll be able to pause gifs from giphy.
 
-      // STEP TWO: make a variable named state and then store the image's data-state into it.
-      // Use the .attr() method for this.
+    //   // STEP TWO: make a variable named state and then store the image's data-state into it.
+    //   // Use the .attr() method for this.
 
-      // ============== FILL IN CODE HERE FOR STEP TWO =========================
+    //   // ============== FILL IN CODE HERE FOR STEP TWO =========================
 
-      var state = $(this).attr("data-state");
+    //   var state = $(this).attr("data-state");
 
 
-      if (state == "still") {
-        var x = $(this).attr("data-animate");
-        $(this).attr("src", x);
-        $(this).attr("data-state", "animate");
-      } else {
-        var x = $(this).attr("data-still");
-        $(this).attr("src", x);
-        $(this).attr("data-state", "still");
-      }
+    //   if (state == "still") {
+    //     var x = $(this).attr("data-animate");
+    //     $(this).attr("src", x);
+    //     $(this).attr("data-state", "animate");
+    //   } else {
+    //     var x = $(this).attr("data-still");
+    //     $(this).attr("src", x);
+    //     $(this).attr("data-state", "still");
+    //   }
 
-    });
+    // });
 
 
       // Calling the renderButtons function to display the intial buttons
