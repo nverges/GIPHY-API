@@ -2,7 +2,7 @@
 
 // gif search parameters (buttons)
 var gifs = ["Dogs", "Cats", "Baby Elephants", "Pandas", "Cheese", "Cookies", "Cake", "Ice Cream", "Ninja", "People Falling Over", 
-"Rick Rolled", "Rage Faces", "Donald Drumpf", "Money", "Computers", "Pineapples", "Bananas in Pajamas", "Leeroy Jenkins"];
+"Rick Rolled", "Rage Faces", "Donald Drumpf", "Money", "Computers", "Pineapples", "Bananas in Pajamas", "Leeroy Jenkins", "Nyan Cat"];
 
 
 //////////// FUNCTIONS ////////////////////////////////////////////////////////////////////////
