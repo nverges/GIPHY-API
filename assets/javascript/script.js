@@ -28,7 +28,7 @@ function displayGif() {
     // Creates a div to hold the gifs
     var gifDiv = $("<div class='gifs'>");
 
-    // pull data
+    // Pull Information
     for (i=0; i<response.data.length; i++) {	
 
       // Rating Information
@@ -87,7 +87,7 @@ function renderButtons() {
 }
 
 
-// function that handles pausing gif
+// function starts and stop gif animation
 function pauseGif() {
 
   // Make a variable named state and then store the image's data-state into it
@@ -121,10 +121,11 @@ $("#add-gif").on("click", function(event) {
   // The desired gif from the textbox is then added to array of gifs
   gifs.push(gifInput);
 
-  // Calling renderButtons function which handles the processing of gifs array into buttons
+  // Calling renderButtons function which handles processing gifs array into buttons
   renderButtons();
 
 });
+
 
 
 // Global event listeners
