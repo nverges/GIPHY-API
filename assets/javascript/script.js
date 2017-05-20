@@ -1,7 +1,8 @@
 //////////// VARIABLES ////////////////////////////////////////////////////////////////////////
 
 // gif search parameters (buttons)
-var gifs = ["Dogs", "Cats", "Baby Elephants", "Pandas", "Cheese", "Cookies", "Cake", "Ice Cream", "Gelato", "Ninja", "People Falling Over", "Rick Rolled", "Rage Faces", "Donald Drumpf", "Money", "Computers"];
+var gifs = ["Dogs", "Cats", "Baby Elephants", "Pandas", "Cheese", "Cookies", "Cake", "Ice Cream", "Ninja", "People Falling Over", 
+"Rick Rolled", "Rage Faces", "Donald Drumpf", "Money", "Computers", "Pineapples", "Bananas in Pajamas", "Leeroy Jenkins"];
 
 
 //////////// FUNCTIONS ////////////////////////////////////////////////////////////////////////
@@ -46,9 +47,9 @@ function displayGif() {
           // Creates an element to hold the image
           var image = $("<img>");
             image.attr("class", "gif");
-            image.attr("src", imgPath.fixed_height.url);
-	          image.attr("data-still", imgPath.fixed_height_still.url);
-            image.attr("data-animate", imgPath.fixed_height.url);
+            image.attr("src", imgPath.fixed_height_still.url);
+	          image.attr("data-still", imgPath.fixed_height.url);
+            image.attr("data-animate", imgPath.fixed_height_still.url);
 
       // populates div with rating and image
       gifDiv.append(ratingDisplay);
@@ -84,6 +85,7 @@ function renderButtons() {
     $("#buttons-view").append(a);
   }
 }
+
 
 // function that handles pausing gif
 function pauseGif() {
