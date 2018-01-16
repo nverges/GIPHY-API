@@ -1,7 +1,6 @@
 # GIPHY-API
 
-<<<<<<< HEAD
-Deployed at: 
+Deployed at: https://thawing-plains-13142.herokuapp.com/
 
 A silly app using vanilla JavaScript and jQuery to allow the user to search for a GIF.
 
@@ -13,6 +12,3 @@ When the button is clicked, the script will hit the GIPHY API and return 10 resu
 
 
 Enjoy!
-=======
-Accepts user input to create a button that will make a call to the GIPHY API and display results.
->>>>>>> 81d4ce67ea597d3d5f2a612df58a431af0d4be2b
