@@ -1,0 +1,23 @@
+{
+  "name": "giphy-api",
+  "version": "1.0.0",
+  "description": "app to search for and display gifs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nverges/GIPHY-API.git"
+  },
+  "author": "nick verges",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nverges/GIPHY-API/issues"
+  },
+  "homepage": "https://github.com/nverges/GIPHY-API#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
